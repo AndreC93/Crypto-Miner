@@ -1,5 +1,5 @@
 # Crypto-Miner
-Javascript Game
+A browser-based game, made with Javascript.
 
 ## Background
 Crypto-Miner is a classic game of gathering money with the added twist of cryptocurrencies replacing gold.
@@ -25,7 +25,28 @@ This app will have a single screen with the game board, a title header, an instr
 ## Technologies, Libraries, APIs
 How will you architect the game? Will it use vanilla JS, HTML, and CSS or will you use a library like React? Will you use any other libraries or API's? Summarize the technical challenges you anticipate and how you plan to solve them.
 
-## Timeline
-This will be the road map for your application. You have about three days for this project. Refer to your MVP and group the features into three phases. Break down each phase into several sub-tasks to keep yourself organized.
+This project will be implemented with the following technolgies: 
+* `JavaScript` for handling of game logic
+* `jQuestion` for manipulation of DOM elements
+* `Canvas` for drawing of game features
 
-You should have a working app at the end of each phase (even if not all of your features are in yet).
+## Timeline
+**Day 1:** Setup any necessary Node packages. Lay groundwork for the next two days. Goals of the day: 
+* Make skeleton for script file and source images to be used later.  
+* Learn the basics of Canvas.
+* Setup webpack.
+* Style page to hold the game frame.
+**Day 2:** Create the game logic using canvas and Javascript. Make sure claw can move correctly and handle it grabbing crypto. Goals of the day:
+* Have a working game that moves. 
+* Find music for background.
+* Incorporate mute button.
+* Add timer and cryto counter to game.
+**Day 3:**
+* Incorporate sprites in place of the shapes from canvas. 
+* Finish polishing game logic. 
+* Make a store screen for in-between rounds, to sell cryptocurrencies. 
+
+## Bonus features
+Some additional features can be: 
+* Buying of upgrades and score manipulators.
+* Leaderboard of high scores. 
