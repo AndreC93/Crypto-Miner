@@ -43,7 +43,7 @@ This project will be implemented with the following technolgies:
 * Incorporate mute button.
 * Add timer and cryto counter to game.
 
-**Day 3:**
+**Day 3:** Finish any loose ends.
 * Incorporate sprites in place of the shapes from canvas. 
 * Finish polishing game logic. 
 * Make a store screen for in-between rounds, to sell cryptocurrencies. 
