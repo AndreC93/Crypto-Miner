@@ -36,11 +36,13 @@ This project will be implemented with the following technolgies:
 * Learn the basics of Canvas.
 * Setup webpack.
 * Style page to hold the game frame.
+
 **Day 2:** Create the game logic using canvas and Javascript. Make sure claw can move correctly and handle it grabbing crypto. Goals of the day:
 * Have a working game that moves. 
 * Find music for background.
 * Incorporate mute button.
 * Add timer and cryto counter to game.
+
 **Day 3:**
 * Incorporate sprites in place of the shapes from canvas. 
 * Finish polishing game logic. 
