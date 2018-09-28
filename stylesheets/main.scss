@@ -1,0 +1,142 @@
+html {
+  width: 100vw;
+  font-family: 'Mali', cursive;
+  font-size: 24px;
+  background-image: url('../images/background.jpg'); 
+}
+
+body {
+  margin: 180px auto;
+  width: 1100px;
+  position: relative;
+
+  main {
+    display: flex;
+  }
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  ul {
+    width: 200px;
+    padding: 15px 10px 15px 40px;
+    background: antiquewhite;
+    border-radius: 28px;
+    li {
+      list-style-type: disc;
+    }
+  }
+  
+  button {
+    background: antiquewhite;
+    border-radius: 100%;
+    padding: 12px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    &:hover {
+      background: burlywood;
+    }
+  }
+
+}
+
+.center-panel {
+  margin: 10px 30px;
+  position: relative;
+  
+  h1 {
+    font-size: 45px;
+    position: absolute;
+    width: 297px;
+    margin: 0 auto;
+    top: -100px;
+    left: 135px;
+    padding: 10px 16px;
+    background: gold;
+    border-radius: 6px;
+  }
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  a {
+    background: antiquewhite;
+    border-radius: 100%;
+    padding: 12px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    &:hover {
+      background: burlywood;
+    }
+  }
+
+  i::before, img {
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  a:nth-of-type(2) img {
+    margin: 2px 0 0 7px;
+  }
+
+  a:last-of-type img {
+    margin: 3px 0 0 4px;
+  }
+}
+
+.shiny {
+  overflow: hidden;
+  &:hover:after {
+    opacity: 1;
+    top: -10%;
+    left: 20%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+    height: 80%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -180%;
+    width: 200%;
+    height: 0;
+    opacity: 0;
+    transform: rotate(30deg);
+    
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.13) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+  &:active:after {
+    opacity: 0;
+  }
+}
+
+footer {
+  background: burlywood;
+  border-radius: 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 45px;
+  margin: 20px auto;
+  width: fit-content;
+  text-align: center;
+}

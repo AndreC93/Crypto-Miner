@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crypto-Miner</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Crypto-Miner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://rawgit.com/AndreC93/jQuestion/master/lib/jquestion.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/reset.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Mali:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 </head>
 <body>
-    <div class='main'></div>
+  <main>
+    <div class="left-panel">
+      <ul><b>Instructions</b>
+        <li>Press <i class="fas fa-arrow-down"></i> to release claw.</li>
+        <li>Time your claw to grab the valuable crypto.</li>
+        <li>Meet the crypto goal for each round.</li>
+      </ul>
+      <button><b>Mute</b></button>
+    </div>
+    
+    <div class="center-panel">
+      <h1 class="shiny" >Crypto-Miner</h1>
+      
+      <canvas id="game-frame" width="600" height="400"></canvas>
+    </div>
+
+    <div class="right-panel">
+      <a href="https://github.com/AndreC93"><i class="devicon-github-plain" alt="Github" ></i></a>
+      <a href="https://www.linkedin.com/in/andre-chow/" ><img src="../images/linkedIn.png" alt="LinkedIn" /></a>
+      <a href="https://andrec93.github.io/" ><img src="../images/ac_logo.png" alt="Visit my Site"></a>
+    </div>
+  </main>
 </body>
-<script src="main.js"></script>
+
+<script src="bundle.js"></script>
+<footer><a href="https://andrec93.github.io/">Made by Andre Chow</a></footer>
 </html>
