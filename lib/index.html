@@ -10,16 +10,18 @@
       crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/main.css" />
-  <link href="https://fonts.googleapis.com/css?family=Mali:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mali:400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
 </head>
 <body>
   <main>
     <div class="left-panel">
       <ul><b>Instructions</b>
-        <li>Press <i class="fas fa-arrow-down"></i> to release claw.</li>
-        <li>Time your claw to grab the valuable crypto.</li>
+        <li>Press <i class="fas fa-arrow-down"></i> to release magnet.</li>
+        <li>Time your magnet to grab the valuable crypto.</li>
         <li>Meet the crypto goal for each round.</li>
       </ul>
       <button><b>Mute</b></button>
@@ -27,8 +29,14 @@
     
     <div class="center-panel">
       <h1 class="shiny" >Crypto-Miner</h1>
+
+      <button id="start-button" class="shiny" >Start</button>
+      <button id="pause-button" class="shiny">Pause</button>
       
-      <canvas id="game-frame" width="600" height="400"></canvas>
+      <canvas id="game-frame" width="600" height="400">
+         Your browser does not support this game
+        <img src="../images/bitcoin_rolling.gif" alt="Your browser does not support this game" />
+      </canvas>
     </div>
 
     <div class="right-panel">

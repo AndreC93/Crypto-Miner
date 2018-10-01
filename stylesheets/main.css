@@ -3,11 +3,12 @@ html {
   font-family: "Mali", cursive;
   font-size: 24px;
   background-image: url("../images/background.jpg");
+  transition: font-size 0.2s ease-out;
 }
 
 body {
-  margin: 180px auto;
-  width: 1100px;
+  margin: 120px auto 25px;
+  width: 1150px;
   position: relative;
 }
 body main {
@@ -36,14 +37,24 @@ body main {
   height: 60px;
   width: 60px;
   text-align: center;
+  transition: font-size 0.2s ease-out;
 }
 .left-panel button:hover {
   background: burlywood;
+  font-size: 27px;
+  text-align: left;
 }
 
 .center-panel {
   margin: 10px 30px;
   position: relative;
+}
+.center-panel canvas {
+  width: 600px;
+  height: 400px;
+  background: url("../images/sparkling_stars.gif") no-repeat;
+  background-size: cover;
+  border: 1px solid black;
 }
 .center-panel h1 {
   font-size: 45px;
@@ -55,6 +66,23 @@ body main {
   padding: 10px 16px;
   background: gold;
   border-radius: 6px;
+  border: 1px solid gold;
+  box-shadow: inset 3px 2px 5px black;
+}
+.center-panel button {
+  position: absolute;
+  display: none;
+  background: gold;
+  border-radius: 6px;
+  top: 158px;
+  left: 220px;
+  font-size: 53px;
+  padding: 3px 18px;
+}
+.center-panel #pause-button {
+  font-size: 26px;
+  top: 13px;
+  left: 477px;
 }
 
 .right-panel {
@@ -70,9 +98,20 @@ body main {
   height: 60px;
   width: 60px;
   text-align: center;
+  position: relative;
 }
 .right-panel a:hover {
   background: burlywood;
+}
+.right-panel a:hover img {
+  height: 58px;
+  width: 58px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.right-panel a:hover i::before {
+  font-size: 58px;
 }
 .right-panel i::before, .right-panel img {
   font-size: 50px;
@@ -92,7 +131,7 @@ body main {
 .shiny:hover:after {
   opacity: 1;
   top: -10%;
-  left: 20%;
+  left: 35%;
   transition-property: left, top, opacity;
   transition-duration: 0.7s, 0.7s, 0.15s;
   transition-timing-function: ease;
@@ -108,7 +147,7 @@ body main {
   opacity: 0;
   transform: rotate(30deg);
   background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.13) 92%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 77%, rgba(255, 255, 255, 0.33) 92%, rgba(255, 255, 255, 0.2) 100%);
 }
 .shiny:active:after {
   opacity: 0;
@@ -116,13 +155,18 @@ body main {
 
 footer {
   background: burlywood;
+  font-family: "Permanent Marker", cursive;
   border-radius: 0;
   padding: 10px 15px;
   border-radius: 8px;
-  font-size: 45px;
+  font-size: 40px;
   margin: 20px auto;
   width: fit-content;
   text-align: center;
+  transition: font-size 0.2s ease-out;
+}
+footer:hover {
+  font-size: 43px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -20,7 +20,7 @@ With Crypto-Miner, users will be able to:
 
 ## Wireframes
 This app will have a single screen with the game board, a title header, an instructions panel, buttons to Github, LinkedIn, and personal site, and a mute button. 
-![wireframe](https://github.com/AndreC93/Crypto-Miner/blob/master/wireframe.png?raw=true)
+![wireframe](https://github.com/AndreC93/Crypto-Miner/blob/master/images/wireframe.png?raw=true)
 
 ## Technologies, Libraries, APIs
 How will you architect the game? Will it use vanilla JS, HTML, and CSS or will you use a library like React? Will you use any other libraries or API's? Summarize the technical challenges you anticipate and how you plan to solve them.
