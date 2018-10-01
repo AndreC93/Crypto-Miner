@@ -21,8 +21,20 @@
     <div class="left-panel">
       <ul><b>Instructions</b>
         <li>Press <i class="fas fa-arrow-down"></i> to release magnet.</li>
-        <li>Time your magnet to grab the valuable crypto.</li>
-        <li>Meet the crypto goal for each round.</li>
+        <li>Press <i class="fas fa-arrow-up"></i> to retract your magnet early.</li>
+        <li>Time your drop to grab the valuable crypto.</li>
+        <li>Collect all the coins to advance.</li>
+        <a id="show-more" >More...</a>
+        <span>
+          <ul id="more-menu" >
+            <li>Crypto currencies' value will fluctuate with each round.</li>
+            <li>The more valuable the coin, the longer it takes to retrieve your magnet.</li>
+            <li>Watch out for viruses, they will severely slow you down.</li>
+            <li>You get 15 seconds back whenever you complete a round.</li>
+            <li>See how far you can get!</li>
+            <a>Hide...</a>
+          </ul>
+        </span>
       </ul>
       <button><b>Mute</b></button>
     </div>
@@ -32,6 +44,21 @@
 
       <button id="start-button" class="shiny" >Start</button>
       <button id="pause-button" class="shiny">Pause</button>
+      <div id="panel" class="shiny" >
+        <div id="round" ></div>
+        <div id="time" ></div>
+        <div id="money" ></div>
+      </div>
+
+      <img id ="pc" src="../images/pc.png" alt="PC">
+
+      <div id="game-over" >
+        <span>&nbsp;</span>
+        <b class="shiny" >GAME OVER</b>
+        <p class="shiny" ></p>
+      </div>
+
+      <div class="flash-message" ></div>
       
       <canvas id="game-frame" width="600" height="400">
          Your browser does not support this game

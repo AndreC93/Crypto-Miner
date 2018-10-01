@@ -28,7 +28,27 @@ body main {
   border-radius: 28px;
 }
 .left-panel ul li {
+  position: relative;
+  font-size: 20px;
   list-style-type: disc;
+}
+.left-panel ul a {
+  cursor: pointer;
+  color: blue;
+}
+.left-panel ul a:hover {
+  color: darkblue;
+}
+.left-panel ul #more-menu {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+}
+.left-panel ul #more-menu a {
+  position: absolute;
+  top: 403px;
+  left: 145px;
 }
 .left-panel button {
   background: antiquewhite;
@@ -54,7 +74,7 @@ body main {
   height: 400px;
   background: url("../images/sparkling_stars.gif") no-repeat;
   background-size: cover;
-  border: 1px solid black;
+  border: 1px solid gold;
 }
 .center-panel h1 {
   font-size: 45px;
@@ -167,6 +187,72 @@ footer {
 }
 footer:hover {
   font-size: 43px;
+}
+
+#panel {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border-radius: 6px;
+  background: gold;
+  padding: 0 5px;
+  width: 136px;
+  font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#pc {
+  display: none;
+  position: absolute;
+  left: 285px;
+  top: 3px;
+  width: 32px;
+  height: 64px;
+}
+
+#game-over {
+  display: none;
+  position: absolute;
+}
+#game-over b {
+  position: absolute;
+  cursor: pointer;
+  font-size: 45px;
+  left: 152px;
+  top: 175px;
+  background: gold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 278px;
+}
+#game-over span {
+  width: 600px;
+  height: 400px;
+  opacity: 0.7;
+  background: black;
+}
+#game-over p {
+  position: absolute;
+  top: 250px;
+  left: 105px;
+  background: gold;
+  padding: 5px 10px;
+  border-radius: 18px;
+  min-width: 358px;
+  text-align: center;
+}
+
+.flash-message {
+  transition-property: top, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  left: 315px;
+  position: absolute;
+  opacity: 0;
+  font-size: 32px;
+  color: green;
 }
 
 /*# sourceMappingURL=main.css.map */
