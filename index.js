@@ -307,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver() {
       clearInterval(gameInterval);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pauseButton.attr('style', 'display: none;')
       const roundsLasted = round > 1 ? round + ' rounds' : '1 round';
       const moneyCollected = Math.round(money * 100)/100; 
       $j('#game-over').attr('style', 'display: flex;')
