@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     bitcoin = new Image();
     bitcoin.value = Math.round(Math.random() * 100) + 100;
-    bitcoin.slowdown = 4.5;
+    bitcoin.slowdown = 3.5;
     bitcoin.name = 'bitcoin';
     bitcoin.src = './images/bitcoin.png';
     
     tron = new Image();
-    tron.slowdown = 2.5;
+    tron.slowdown = 2;
     tron.name = 'tron';
     tron.value = Math.round(Math.random() * 100) + 20;
     tron.src = './images/tron.png';
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.on('click', () => {
       $j('#panel').attr('style', 'display: block;');
       $j('#pc').attr('style', 'display: block;');
-      if (startButton.html() === 'Start') time = 100;
+      if (startButton.html() === 'Start') time = 1800;
       ctx.fillStyle = '#010014';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fill();
