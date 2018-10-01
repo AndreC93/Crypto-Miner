@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       drawString();
-      l = Math.sqrt(x * x + y * y);
+      l = Math.sqrt(x * x + y * y) + magnet.height / 2;
       x2 = (translateX + l * Math.cos(angle + 0.785398));
       y2 = (50 + l * Math.sin(angle + 0.785398));
       points = [];
