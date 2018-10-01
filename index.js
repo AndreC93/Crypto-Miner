@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.on('click', () => {
       $j('#panel').attr('style', 'display: block;');
       $j('#pc').attr('style', 'display: block;');
-      if (startButton.html() === 'Start') time = 1800;
+      if (startButton.html() === 'Start') time = 100;
       ctx.fillStyle = '#010014';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fill();
@@ -133,9 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
       $j('#time').html(`Time: ${Math.round((time--)/60)}`);
       if(time <= 0) {
         gameOver();
+      } else {
+        drawCoins(coins);
+        advanceRound();
       }
-      drawCoins(coins);
-      advanceRound();
     }
     
     function advanceRound() {
