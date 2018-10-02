@@ -98,6 +98,8 @@ body main {
   left: 220px;
   font-size: 53px;
   padding: 3px 18px;
+  border: 1px solid gold;
+  box-shadow: inset 3px 2px 5px black;
 }
 .center-panel #pause-button {
   font-size: 26px;
@@ -222,11 +224,13 @@ footer:hover {
   cursor: pointer;
   font-size: 45px;
   left: 152px;
-  top: 175px;
+  top: 170jpx;
   background: gold;
   padding: 5px 10px;
   border-radius: 5px;
   width: 278px;
+  border: 1px solid gold;
+  box-shadow: inset 3px 2px 5px black;
 }
 #game-over span {
   width: 600px;

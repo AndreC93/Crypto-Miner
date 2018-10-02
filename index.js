@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gameOverButton = $j('#game-over');
   
   const focusOnGame = [canvas, startButton.nodes[0], pauseButton.nodes[0], gameOverButton.nodes[0]];
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keydown', (e) => {
     if (focusOnGame.includes(lastDownTarget)) {
       handleKeydown(e);
     }
@@ -27,15 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleKeydown = (e) => {
     if (e.key === 'ArrowDown') {
       rotate = false;
-      if (dx < 0 || dy < 0) {
+      if (dx < 0) {
         dx = -dx;
         dy = -dy;
+      } else if (dx > 0 && dx < 5) {
+        dx = dx * 1.1;
+        dy = dy * 1.1;
       }
     } else if (e.key === 'ArrowUp' && !rotate){
       if (dx > 0) {
         dx = -dx;
         dy = -dy;
-      } else if (dx < 6) {
+      } else if (dx > -5) {
         dx = dx * 1.1;
         dy = dy * 1.1;
       }
@@ -56,26 +59,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
     bitcoin = new Image();
     bitcoin.value = Math.round(Math.random() * 100) + 100;
-    bitcoin.slowdown = 4.5;
+    bitcoin.slowdown = 5;
     bitcoin.name = 'bitcoin';
     bitcoin.src = './images/bitcoin.png';
     
     tron = new Image();
-    tron.slowdown = 3;
+    tron.slowdown = 3.5;
     tron.name = 'tron';
     tron.value = Math.round(Math.random() * 100) + 20;
     tron.src = './images/tron.png';
     
     penny = new Image();
     penny.value = 0.01
-    penny.slowdown = 1;
+    penny.slowdown = 1.2;
     penny.name = 'penny';
     penny.src = './images/penny.png';
 
     startButton.on('click', () => {
       $j('#panel').attr('style', 'display: block;');
       $j('#pc').attr('style', 'display: block;');
-      if (startButton.html() === 'Start') time = 100;
+      if (startButton.html() === 'Start') time = 1800;
       ctx.fillStyle = '#010014';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fill();
@@ -140,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       collect() {
-        if (this.y < 105 && this.here && this.x > 240 && this.x < 340) {
+        if (this.y < 98 && this.here && this.x > 235 && this.x < 345) {
           this.here = false;
           return coins[this.index] = undefined;
         }
@@ -166,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function advanceRound() {
       if(coins.every( coin => coin === undefined) && rotate) {
         round += 1;
-        time += 900;
+        time += 960;
         coins = [];
         flashMessage(`Round ${round}!`);
         for(let i = 0; i <= round + 2; i++) {
