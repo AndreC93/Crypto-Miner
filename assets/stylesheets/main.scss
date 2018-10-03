@@ -197,8 +197,10 @@ body {
 }
 
 footer {
+  background: linear-gradient(right, color-stop1, color-stop2);
   background: burlywood;
   font-family: 'Permanent Marker', cursive;
+  border: 2px solid black;
   border-radius: 0;
   padding: 10px 15px;
   border-radius: 8px;
@@ -206,9 +208,28 @@ footer {
   margin: 20px auto;
   width: fit-content;
   text-align: center;
-  transition: font-size .2s ease-out;
+  position: relative;
   &:hover {
-    font-size: 43px;
+    a:first-of-type {
+      opacity: 0;
+      transition: none;
+    }
+    a:last-of-type {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  a {
+    transition: opacity .4s ease-out;
+  }
+
+  a:last-of-type {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 8px;
+    left: 25px;
   }
 }
 
