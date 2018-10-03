@@ -4,6 +4,12 @@ html {
   font-size: 24px;
   background-image: url("../images/background.jpg");
   transition: font-size 0.2s ease-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -26,6 +32,7 @@ body main {
   padding: 15px 10px 15px 40px;
   background: antiquewhite;
   border-radius: 28px;
+  border: 2px solid black;
 }
 .left-panel ul li {
   position: relative;
@@ -53,6 +60,7 @@ body main {
 .left-panel button {
   background: antiquewhite;
   border-radius: 100%;
+  border: 2px solid black;
   padding: 12px;
   height: 60px;
   width: 60px;
@@ -116,6 +124,7 @@ body main {
 .right-panel a {
   background: antiquewhite;
   border-radius: 100%;
+  border: 2px solid black;
   padding: 12px;
   height: 60px;
   width: 60px;
@@ -135,10 +144,16 @@ body main {
 .right-panel a:hover i::before {
   font-size: 58px;
 }
+.right-panel a:hover a:first-of-type {
+  line-height: inherit;
+}
 .right-panel i::before, .right-panel img {
   font-size: 50px;
   height: 50px;
   width: 50px;
+}
+.right-panel a:first-of-type {
+  line-height: 82px;
 }
 .right-panel a:nth-of-type(2) img {
   margin: 2px 0 0 7px;
@@ -175,12 +190,26 @@ body main {
   opacity: 0;
 }
 
+footer::before {
+  background: linear-gradient(#ae7d3d, antiquewhite);
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-size: 40px;
+  margin: 20px auto;
+  width: 406px;
+  height: 58px;
+  content: "";
+  position: absolute;
+  top: -21px;
+  left: -1px;
+  opacity: 0;
+}
+
 footer {
-  background: linear-gradient(right, color-stop1, color-stop2);
-  background: burlywood;
+  background: linear-gradient(antiquewhite, #ae7d3d);
   font-family: "Permanent Marker", cursive;
   border: 2px solid black;
-  border-radius: 0;
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 40px;
@@ -188,6 +217,10 @@ footer {
   width: fit-content;
   text-align: center;
   position: relative;
+}
+footer:hover::before {
+  transition: opacity 1.3s ease-out;
+  opacity: 1;
 }
 footer:hover a:first-of-type {
   opacity: 0;
@@ -199,6 +232,7 @@ footer:hover a:last-of-type {
 }
 footer a {
   transition: opacity 0.4s ease-out;
+  z-index: 1;
 }
 footer a:last-of-type {
   opacity: 0;
