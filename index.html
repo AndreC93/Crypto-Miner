@@ -9,7 +9,7 @@
 
   <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script> -->
   <script>
-    var config = {
+    const config = {
       apiKey: "AIzaSyCt-Nr9lL79p55UfC9oXOdl_fbZk540PKA",
       authDomain: "crypto-miner-3.firebaseapp.com",
       databaseURL: "https://crypto-miner-3.firebaseio.com",
@@ -18,6 +18,16 @@
       messagingSenderId: "685052450831"
     };
     firebase.initializeApp(config);
+    const getScores = firebase.database().ref('scores/')
+      .orderByChild("round").limitToLast(5);
+    let i = 0;
+    let showScores = [];
+    getScores.on('child_added', (snapshot) => {
+      childScore = snapshot.val();
+      const highscores = document.getElementById("highscores");
+
+      highscores.innerHTML += `<li><div class='score' ><h4><i class="fas fa-star shiny"></i>${++i}. ${childScore.name.slice(0,10)}</h4><h5>Rounds: ${childScore.round} Money: $${childScore.money}</h5></div></li>`;
+    });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://rawgit.com/AndreC93/jQuestion/master/lib/jquestion.js"></script>
@@ -60,8 +70,19 @@
             <a>Hide...</a>
           </ul>
         </span>
+        <span>
+          <ul id="highscores">
+            <h3>
+              High Scores
+            </h3>
+          </ul>
+        </span>
       </ul>
-      <button id="mute" ><b>Mute</b></button>
+
+      <div id="left-buttons">
+        <button id="highscore-button" >High Scores</button>
+        <button id="mute" ><b>Mute</b></button>
+      </div>
     </div>
     
     <div class="center-panel">
@@ -84,6 +105,11 @@
       </div>
 
       <div class="flash-message" ></div>
+
+      <form id="score-input" >
+        <input id="input" placeholder="Name Please" autoComplete="off" maxlength="10"/>
+        <button id="enter-score" class="shiny" >Enter Score</button>
+      </form>
       
       <canvas id="game-frame" width="600" height="400">
          Your browser does not support this game
