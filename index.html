@@ -25,6 +25,7 @@
     
     const makeHighscoresList = (newScore) => {
       const highscores = document.getElementById("highscores");
+      if (!highscores) return;
       highscores.innerHTML = '<h3>High Scores</h3 >';
       
       if (newScore) {
