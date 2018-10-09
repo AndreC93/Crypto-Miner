@@ -5,6 +5,7 @@ A browser-based game, made with Javascript.
 Crypto-Miner is a classic game of gathering money with the added twist of cryptocurrencies replacing gold.
 You control a computer miner who sends out his magnet to grab the precious cryptos, if you time it correctly. 
 The objective of this game is to collect all the coins for each round in order to progress.
+The amount of money each cryptocurrency is worth will fluctuate between each round to simulate how real life crypto prices can vary from second to second.
 With each completed round, you get back 15 seconds. You are in a race to see how many rounds you can complete before you run out of time!
 
 ## Functionality & MVP
