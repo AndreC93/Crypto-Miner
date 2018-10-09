@@ -356,6 +356,11 @@ footer a:last-of-type {
 #highscores .score {
   z-index: 2;
 }
+#highscores .score:hover i {
+  color: gold;
+  text-shadow: 0 0 2px black;
+  font-size: 22px;
+}
 #highscores h3 {
   margin-bottom: 10px;
   text-align: center;
@@ -365,7 +370,8 @@ footer a:last-of-type {
   position: relative;
 }
 #highscores h4 i {
-  color: gold;
+  text-shadow: 0 0 5px gold;
+  color: gray;
   position: absolute;
   left: -25px;
   top: 4px;

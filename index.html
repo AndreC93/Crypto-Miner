@@ -7,7 +7,6 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
 
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script> -->
   <script>
     const config = {
       apiKey: "AIzaSyCt-Nr9lL79p55UfC9oXOdl_fbZk540PKA",
@@ -18,57 +17,58 @@
       messagingSenderId: "685052450831"
     };
     firebase.initializeApp(config);
-    let getScores = firebase.database().ref('scores/')
-      .orderByChild("round").limitToLast(5);
+    // let getScores = firebase.database().ref('scores/')
+    //   .orderByChild("round").limitToLast(5);
     
-    let highScoresFromDB = [];
+    // const highScoresFromDB = [];
     
-    const makeHighscoresList = (newScore) => {
-      const highscores = document.getElementById("highscores");
-      if (!highscores) return;
-      highscores.innerHTML = '<h3>High Scores</h3 >';
+    // const makeHighscoresList = (newScore) => {
+    //   const highscores = document.getElementById("highscores");
+    //   if (!highscores) return;
+    //   highscores.innerHTML = '<h3>High Scores</h3 >';
         
-        if (newScore) {
-          for (let i = 0; i < 5; i++) {
-            const score = highScoresFromDB[i];
-            if (score[0] <  newScore[0]) {
-              highScoresFromDB.splice(i, 1, newScore);
-              break;
-            } 
-          }
-        } 
-        
-        for (let i = 0; i < 5; i++) {
-          const score = highScoresFromDB[i];
-          highscores.innerHTML += `<li><div class='score' ><h4><i class="fas fa-star shiny"></i>${i + 1}. ` + score[1];
-          }
-        };
-        
-        getScores.on('child_added', (snapshot) => {
-          const childScore = snapshot.val();
-          const htmlScore = `${childScore.name.slice(0, 10)}</h4><h5>Rounds: ${childScore.round} Money: $${childScore.money}</h5></div></li>`;
-          if (highScoresFromDB.length < 5) {
-            highScoresFromDB.push([childScore.round, htmlScore]);
-            if (highScoresFromDB.length === 5) {
-              highScoresFromDB = highScoresFromDB.reverse();
-              makeHighscoresList();
-            }
-          } else {
-            makeHighscoresList([childScore.round, htmlScore]);
-          }
-        });
-        
-        const getScoresAgain = () => {
-          if (highScoresFromDB.length < 5) {
-            getScores = firebase.database().ref('scores/')
-              .orderByChild("round").limitToLast(5);
-              
-            setTimeout(getScoresAgain, 3000);
-          }
-        };
-        
-        setTimeout(getScoresAgain, 3000);
-        </script>
+    //   if (newScore) {
+    //     for (let i = 0; i < 5; i++) {
+    //       const score = highScoresFromDB[i];
+    //       if (score[0] <  newScore[0]) {
+    //         highScoresFromDB.splice(i, 1, newScore);
+    //         break;
+    //       } 
+    //     }
+    //   } 
+      
+    //   for (let i = 0; i < 5; i++) {
+    //     const score = highScoresFromDB[i];
+    //     highscores.innerHTML += `<li><div class='score' ><h4><i class="fas fa-star shiny"></i>${i + 1}. ` + score[1];
+    //   }
+    // };
+      
+    // getScores.on('child_added', (snapshot) => {
+    //   const childScore = snapshot.val();
+    //   const htmlScore = `${childScore.name.slice(0, 10)}</h4><h5>Rounds: ${childScore.round} Money: $${childScore.money}</h5></div></li>`;
+    //   if (highScoresFromDB.length < 5) {
+    //     highScoresFromDB.push([childScore.round, htmlScore]);
+    //     if (highScoresFromDB.length === 5) {
+    //       highScoresFromDB = highScoresFromDB.reverse();
+    //       makeHighscoresList();
+    //     }
+    //   } else {
+    //     makeHighscoresList([childScore.round, htmlScore]);
+    //   }
+    // });
+      
+    // const getScoresAgain = () => {
+    //   if (highScoresFromDB.length < 5) {
+    //     getScores = firebase.database().ref('scores/')
+    //       .orderByChild("round").limitToLast(5);
+          
+    //     setTimeout(getScoresAgain, 60000);
+    //   }
+    // };
+      
+    // setTimeout(getScoresAgain, 3000);
+  </script>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://rawgit.com/AndreC93/jQuestion/master/lib/jquestion.js"></script>
   <link rel="icon" href="./assets/images/coins.png">

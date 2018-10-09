@@ -378,9 +378,17 @@ footer {
   padding-right: 15px;
   width: 220px;
   font-weight: bold;
+
   
   .score {
     z-index: 2;
+    &:hover {
+      i {
+        color: gold;
+        text-shadow: 0 0 2px black;
+        font-size: 22px;
+      }
+    }
   }
 
   h3 {
@@ -392,7 +400,8 @@ footer {
     margin: 5px 0 0 24px;
     position: relative;
     i {
-      color: gold;
+      text-shadow: 0 0 5px gold;
+      color: gray;
       position: absolute;
       left: -25px;
       top: 4px;
