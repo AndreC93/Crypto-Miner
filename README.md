@@ -12,16 +12,16 @@ A browser-based game, made with Javascript.
 * You are in a race to see how many rounds you can complete before you run out of time!
 
 ## Features
-With Crypto-Miner, users will be able to:
+With Crypto-Miner, users are able to:
 - [ ] Start, pause, and reset the game
 - [ ] Release the magnet with DOWN key
    - [ ] The magnet will move back and forth, in a semi-circle
 - [ ] Retract the magnet with UP key
 - [ ] Mute the sound, using a button on the side
-- [ ] Instructions panel on the side
+- [ ] Toggle instructions panel on the side for more info
 
 ## Technologies, Libraries, APIs
-This project will be implemented with the following technolgies: 
+This project is implemented with the following technolgies: 
 * `JavaScript` for handling of game logic
 * `jQuestion` for manipulation of DOM elements
 * `Canvas` for drawing of game features
