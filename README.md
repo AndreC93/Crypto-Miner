@@ -1,5 +1,6 @@
 # Crypto-Miner
 A browser-based game, made with Javascript.
+![wireframe](./assets/images/wireframe.png)
 
 ## Background
 Crypto-Miner is a classic game of gathering money with the added twist of cryptocurrencies replacing gold.
@@ -21,7 +22,7 @@ With Crypto-Miner, users will be able to:
 
 ## Wireframes
 This app will have a single screen with the game board, a title header, an instructions panel, buttons to Github, LinkedIn, and personal site, and a mute button. 
-![wireframe](https://github.com/AndreC93/Crypto-Miner/blob/master/images/wireframe.png?raw=true)
+![wireframe](./assets/images/wireframe.png)
 
 ## Technologies, Libraries, APIs
 This project will be implemented with the following technolgies: 
