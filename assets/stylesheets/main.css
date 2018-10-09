@@ -52,6 +52,7 @@ body main {
   display: none;
   top: 0;
   left: 0;
+  padding-bottom: 19px;
 }
 .left-panel ul #more-menu a {
   position: absolute;
