@@ -17,56 +17,6 @@
       messagingSenderId: "685052450831"
     };
     firebase.initializeApp(config);
-    // let getScores = firebase.database().ref('scores/')
-    //   .orderByChild("round").limitToLast(5);
-    
-    // const highScoresFromDB = [];
-    
-    // const makeHighscoresList = (newScore) => {
-    //   const highscores = document.getElementById("highscores");
-    //   if (!highscores) return;
-    //   highscores.innerHTML = '<h3>High Scores</h3 >';
-        
-    //   if (newScore) {
-    //     for (let i = 0; i < 5; i++) {
-    //       const score = highScoresFromDB[i];
-    //       if (score[0] <  newScore[0]) {
-    //         highScoresFromDB.splice(i, 1, newScore);
-    //         break;
-    //       } 
-    //     }
-    //   } 
-      
-    //   for (let i = 0; i < 5; i++) {
-    //     const score = highScoresFromDB[i];
-    //     highscores.innerHTML += `<li><div class='score' ><h4><i class="fas fa-star shiny"></i>${i + 1}. ` + score[1];
-    //   }
-    // };
-      
-    // getScores.on('child_added', (snapshot) => {
-    //   const childScore = snapshot.val();
-    //   const htmlScore = `${childScore.name.slice(0, 10)}</h4><h5>Rounds: ${childScore.round} Money: $${childScore.money}</h5></div></li>`;
-    //   if (highScoresFromDB.length < 5) {
-    //     highScoresFromDB.push([childScore.round, htmlScore]);
-    //     if (highScoresFromDB.length === 5) {
-    //       highScoresFromDB = highScoresFromDB.reverse();
-    //       makeHighscoresList();
-    //     }
-    //   } else {
-    //     makeHighscoresList([childScore.round, htmlScore]);
-    //   }
-    // });
-      
-    // const getScoresAgain = () => {
-    //   if (highScoresFromDB.length < 5) {
-    //     getScores = firebase.database().ref('scores/')
-    //       .orderByChild("round").limitToLast(5);
-          
-    //     setTimeout(getScoresAgain, 60000);
-    //   }
-    // };
-      
-    // setTimeout(getScoresAgain, 3000);
   </script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,7 +28,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/stylesheets/main.css" />
   <link href="https://fonts.googleapis.com/css?family=Mali:400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <style>
     body:before {
