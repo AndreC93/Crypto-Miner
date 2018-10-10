@@ -1,5 +1,6 @@
 # Crypto-Miner
 A browser-based game, made with Javascript.
+
 ![gif](./assets/images/crypto_miner.gif)
 
 ## Background
