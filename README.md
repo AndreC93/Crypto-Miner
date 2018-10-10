@@ -1,6 +1,6 @@
 # Crypto-Miner
 A browser-based game, made with Javascript.
-![wireframe](./assets/images/screen_shot.png)
+![wireframe](./assets/images/crypto_miner.gif)
 
 ## Background
 * Crypto-Miner is a classic game of gathering money with the added twist of cryptocurrencies replacing gold.
