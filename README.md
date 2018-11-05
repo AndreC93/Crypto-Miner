@@ -18,8 +18,9 @@ With Crypto-Miner, users are able to:
 - [ ] Release the magnet with DOWN key
    - [ ] The magnet will move back and forth, in a semi-circle
 - [ ] Retract the magnet with UP key
-- [ ] Mute the sound, using a button on the side
-- [ ] Toggle instructions panel on the side for more info
+- [ ] Mute the sound, using a button or pressing 'M'
+- [ ] Toggle instructions panel for more info
+- [ ] Toggle highscores panel
 
 ## Technologies, Libraries, APIs
 This project is implemented with the following technolgies: 
