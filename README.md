@@ -1,5 +1,6 @@
 # Crypto-Miner
 A browser-based game, made with Javascript.
+
 [Play Game](https://www.andrechow.com/Crypto-Miner/ "Crypto-Miner")
 
 ![gif](./assets/images/crypto_miner.gif)
